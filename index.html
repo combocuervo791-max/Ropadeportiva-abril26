@@ -274,5 +274,22 @@ function cerrarZoom() {
 <div id="modal" class="modal" onclick="cerrarZoom()">
   <img id="imgZoom">
 </div>  
+  <script>
+let startX = 0;
+
+document.querySelectorAll(".carrusel").forEach(c => {
+  c.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+  });
+
+  c.addEventListener("touchend", e => {
+    let endX = e.changedTouches[0].clientX;
+    let id = c.querySelector(".carrusel-contenedor").id;
+
+    if (startX - endX > 50) mover(1, id);
+    if (endX - startX > 50) mover(-1, id);
+  });
+});
+</script>
 </body>
 </html>
