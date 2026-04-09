@@ -245,18 +245,17 @@ function mover(direccion, id) {
   const carrusel = document.getElementById(id);
   const total = carrusel.children.length;
 
-  if (!carrusel.dataset.index) {
-    carrusel.dataset.index = 0;
-  }
+  let index = carrusel.dataset.index ? parseInt(carrusel.dataset.index) : 0;
 
-  let index = parseInt(carrusel.dataset.index);
   index += direccion;
 
   if (index < 0) index = total - 1;
   if (index >= total) index = 0;
 
   carrusel.dataset.index = index;
-  carrusel.style.transform = `translateX(-${index * 100}%)`;
+
+  const ancho = carrusel.children[0].clientWidth;
+  carrusel.style.transform = `translateX(-${index * ancho}px)`;
 }
 </script>
   <script>
