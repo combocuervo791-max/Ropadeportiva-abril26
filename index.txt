@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ropa deportiva</title>
+
+  <style>
+    .modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+}
+
+.modal img {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+    .carrusel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carrusel-contenedor {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carrusel img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+.boton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6); /* transparente */
+  color: white;
+  border: none;
+  width: 60px;        /* 🔥 tamaño fijo */
+  height: 60px;
+  cursor: pointer;
+  font-size: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton:hover {
+  background: rgba(0,0,0,0.9);
+}  
+    
+.boton.izq {
+  left: 10px;
+}
+
+.boton.der {
+  right: 10px;
+}
+    body {
+      font-family: Arial;
+      background: #f5f5f5;
+      text-align: center;
+    }
+
+    h1 {
+      background: black;
+      color: white;
+      padding: 15px;
+    }
+
+    .galeria {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+   .producto {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+}
+
+     .producto img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.imagenes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+    .whatsapp {
+      display: inline-block;
+      margin: 30px;
+      padding: 15px 25px;
+      background: green;
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 10px;
+    }
+
+    .whatsapp:hover {
+      background: darkgreen;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🛍️ Ropa deportiva</h1>
+
+<div class="galeria">
+
+  <!-- PRODUCTO 1 -->
+  <div class="producto">
+  <h3>CAMISETA DEPORTIVA</h3>
+
+  <div class="carrusel">
+    
+    <button class="boton izq" onclick="mover(-1, 'carrusel1')">❮</button>
+     <button class="boton der" onclick="mover(1, 'carrusel1')">❯</button>
+    
+    <div class="carrusel-contenedor" id="carrusel1">
+    <img src="camisetas.jpg"onclick="abrirZoom(this)">
+    <img src="camisetas1.jpeg"onclick="abrirZoom(this)">
+    <img src="camisetas10.jpg"onclick="abrirZoom(this)">
+    <img src="camisetas11.jpg"onclick="abrirZoom(this)">
+    <img src="camisetas12.jpg"onclick="abrirZoom(this)">
+    <img src="camisetas13.jpg"onclick="abrirZoom(this)">
+    <img src="camisetas14.jpg"onclick="abrirZoom(this)">
+    <img src="camisetas15.jpg"onclick="abrirZoom(this)">
+    <img src="camisetas16.jpg"onclick="abrirZoom(this)">
+    <img src="camisetas17.jpg"onclick="abrirZoom(this)">
+    <img src="camisetas18.jpg"onclick="abrirZoom(this)">
+    <img src="camisetas19.jpg"onclick="abrirZoom(this)">
+    <img src="camisetas2.jpg"onclick="abrirZoom(this)">
+    <img src="camisetas20.jpg"onclick="abrirZoom(this)">
+    <img src="camisetas2.jpeg"onclick="abrirZoom(this)">
+    <img src="camisetas3.jpeg"onclick="abrirZoom(this)">
+    <img src="camisetas3.jpg"onclick="abrirZoom(this)">  
+    <img src="camisetas4.jpeg"onclick="abrirZoom(this)">
+    <img src="camisetas4.jpg"onclick="abrirZoom(this)">  
+    <img src="camisetas5.jpeg"onclick="abrirZoom(this)">
+    <img src="camisetas6.jpg"onclick="abrirZoom(this)">  
+    <img src="camisetas7.jpeg"onclick="abrirZoom(this)">
+    <img src="camisetas7.jpg"onclick="abrirZoom(this)">  
+    <img src="camisetas8.jpg"onclick="abrirZoom(this)">  
+    <img src="camisetas9.jpg"onclick="abrirZoom(this)">  
+    <img src="camisetas9.jpeg"onclick="abrirZoom(this)">  
+  
+  </div>
+  <button class="boton der" onclick="mover(1, 'carrusel1')">❯</button>
+  </div>
+  </div>
+        
+  <!-- PRODUCTO 2 -->
+  <div class="producto">
+    <h3>SHORT DEPORTIVO</h3>
+    <div class="carrusel">
+    
+    <button class="boton izq" onclick="mover(-1, 'carrusel2')">❮</button>
+      <div class="carrusel-contenedor" id="carrusel2">
+    <img src="camisetas.jpg"onclick="abrirZoom(this)">
+    <img src="camisetas1.jpeg"onclick="abrirZoom(this)">
+    <img src="camisetas10.jpg"onclick="abrirZoom(this)">
+    <img src="camisetas11.jpg"onclick="abrirZoom(this)">
+    <img src="camisetas12.jpg"onclick="abrirZoom(this)">
+  </div>
+  <button class="boton der" onclick="mover(1, 'carrusel2')">❯</button>
+  </div>
+  </div>
+  <!-- PRODUCTO 3 -->
+  <div class="producto">
+    <h3>BUZOS</h3>
+    <img src="https://via.placeholder.com/300">
+    <img src="https://via.placeholder.com/300">
+  </div>
+  
+    <!-- PRODUCTO 4 -->
+  <div class="producto">
+    <h3>CAMPERAS</h3>
+    <img src="https://via.placeholder.com/300">
+    <img src="https://via.placeholder.com/300">
+  </div>
+
+      <!-- PRODUCTO 5 -->
+  <div class="producto">
+    <h3>ROPA TERMICA</h3>
+    <img src="https://via.placeholder.com/300">
+    <img src="https://via.placeholder.com/300">
+  </div>
+  
+</div>
+
+<!-- BOTÓN FINAL -->
+<a class="whatsapp" href="https://wa.me/542920214841?text=Hola%20quiero%20consultar%20por%20los%20productos" target="_blank">
+  📲 Contactar por WhatsApp
+</a>
+<script>
+function mover(direccion, id) {
+  const carrusel = document.getElementById(id);
+  const total = carrusel.children.length;
+
+  if (!carrusel.dataset.index) {
+    carrusel.dataset.index = 0;
+  }
+
+  let index = parseInt(carrusel.dataset.index);
+  index += direccion;
+
+  if (index < 0) index = total - 1;
+  if (index >= total) index = 0;
+
+  carrusel.dataset.index = index;
+  carrusel.style.transform = `translateX(-${index * 100}%)`;
+}
+</script>
+  <script>
+function abrirZoom(img) {
+  const modal = document.getElementById("modal");
+  const imgZoom = document.getElementById("imgZoom");
+
+  modal.style.display = "block";
+  imgZoom.src = img.src;
+}
+
+function cerrarZoom() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+<div id="modal" class="modal" onclick="cerrarZoom()">
+  <img id="imgZoom">
+</div>  
+</body>
+</html>
