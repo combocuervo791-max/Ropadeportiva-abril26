@@ -5,8 +5,12 @@
   <title>Ropa deportiva</title>
 
   <style>
-    .producto h3 {
+ .producto h3 {
   margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #222;
+  letter-spacing: 1px;
 }
 
 .producto {
@@ -383,7 +387,7 @@ function mover(direccion, id) {
 
   carrusel.dataset.index = index;
 
-  const ancho = carrusel.children[0].clientWidth;
+  const ancho = carrusel.children[0].offsetWidth; // 🔥 mejor que clientWidth
   carrusel.style.transform = `translateX(-${index * ancho}px)`;
 }
 </script>
