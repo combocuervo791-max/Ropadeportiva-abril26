@@ -149,20 +149,33 @@
   gap: 10px;
 }
 
-    .whatsapp {
-      display: inline-block;
-      margin: 30px;
-      padding: 15px 25px;
-      background: green;
-      color: white;
-      font-size: 18px;
-      text-decoration: none;
-      border-radius: 10px;
-    }
+   .whatsapp {
+  display: inline-block;
+  margin: 40px 0;
+  padding: 18px 30px;
+  background: linear-gradient(45deg, #25D366, #1ebe5d);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
 
-    .whatsapp:hover {
-      background: darkgreen;
-    }
+.whatsapp:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+    @keyframes latido {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.whatsapp {
+  animation: latido 1.5s infinite;
+}
   </style>
 </head>
 <body>
@@ -329,7 +342,7 @@
 
 <!-- BOTÓN FINAL -->
 <a class="whatsapp" href="https://wa.me/542920214841?text=Hola%20quiero%20consultar%20por%20los%20productos" target="_blank">
-  📲 Contactar por WhatsApp
+  🚀 Hacer pedido por WhatsApp
 </a>
 <script>
 function mover(direccion, id) {
