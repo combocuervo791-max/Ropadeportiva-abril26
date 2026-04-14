@@ -73,13 +73,14 @@
 
 .carrusel-contenedor {
   display: flex;
-  transition: transform 0.5s ease;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
 .carrusel img {
-  width: 100%;
-  flex-shrink: 0;
-  border-radius: 10px;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
 }
 
 .boton {
@@ -193,7 +194,6 @@
 
   <div class="carrusel">
     
-    <button class="boton izq" onclick="mover(-1, 'carrusel1')">❮</button>
     
     <div class="carrusel-contenedor" id="carrusel1">
     <img src="argentina.jpeg"onclick="abrirZoom(this)">
@@ -219,7 +219,6 @@
     <img src="talleniño.png"onclick="abrirZoom(this)">   
   </div>
     
-  <button class="boton der" onclick="mover(1, 'carrusel1')">❯</button>
     
   </div>
   </div>
@@ -437,20 +436,6 @@ function cerrarZoom() {
   <img id="imgZoom">
 </div>  
   <script>
-let startX = 0;
-
-document.querySelectorAll(".carrusel").forEach(c => {
-  c.addEventListener("touchstart", e => {
-    startX = e.touches[0].clientX;
-  });
-
-  c.addEventListener("touchend", e => {
-    let endX = e.changedTouches[0].clientX;
-    let id = c.querySelector(".carrusel-contenedor").id;
-
-    if (startX - endX > 50) mover(1, id);
-    if (endX - startX > 50) mover(-1, id);
-  });
 });
 </script>
 </body>
