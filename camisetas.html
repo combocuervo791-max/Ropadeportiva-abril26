@@ -1,1 +1,62 @@
+    <style>
 
+    .carrusel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carrusel-contenedor {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  /* 🔥 suavidad en celular */
+  -webkit-overflow-scrolling: touch;
+
+  /* 🔥 evita scroll vertical accidental */
+  touch-action: pan-x;
+}
+
+.carrusel img {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  height: 300px;          /* 🔥 clave */
+  object-fit: cover;      /* 🔥 evita deformación */
+}
+</style>
+
+<h3>CAMISETA DEPORTIVA</h3>
+  <p class="precio">
+  <span style="text-decoration: line-through;">$48.000</span> OFERTA $35.000
+</p>
+
+  <div class="carrusel">
+        
+    <div class="carrusel-contenedor" id="carrusel1">
+    <img src="argentina.jpeg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="argentina1.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="argentina2.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="australia.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="crusader.JPG" loading="lazy" onclick="abrirZoom(this)">
+    <img src="escocia.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="fiji.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="francia.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="gales.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="harlenquin.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="inglaterra.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="irlanda.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="italia.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="munster.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="nz-maori.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="nz-negro.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="nz.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="rancing.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="sudafrica.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="talle.png" loading="lazy" onclick="abrirZoom(this)">
+    <img src="talleniño.png" loading="lazy" onclick="abrirZoom(this)">
+
+    
+  </div>
+  </div>
