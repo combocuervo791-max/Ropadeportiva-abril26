@@ -88,9 +88,11 @@
 
 .carrusel img {
   flex: 0 0 100%;
-  scroll-snap-align: center; /* 🔥 ESTE es el correcto */
+  scroll-snap-align: center;
+  height: 300px;          /* 🔥 clave */
+  object-fit: cover;      /* 🔥 evita deformación */
 }
-.boton {
+    .boton {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
