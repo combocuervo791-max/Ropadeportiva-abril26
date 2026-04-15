@@ -86,7 +86,7 @@
 
 .carrusel img {
   flex: 0 0 100%;
- scroll-snap-type: x mandatory;
+  scroll-snap-align: center; /* 🔥 ESTE es el correcto */
 }
 .boton {
   position: absolute;
@@ -189,27 +189,27 @@
   <div class="carrusel">
         
     <div class="carrusel-contenedor" id="carrusel1">
-    <img src="argentina.jpeg"onclick="abrirZoom(this)">
-    <img src="argentina1.jpg"onclick="abrirZoom(this)">
-    <img src="argentina2.jpg"onclick="abrirZoom(this)">
-    <img src="australia.jpg"onclick="abrirZoom(this)">
-    <img src="crusader.JPG"onclick="abrirZoom(this)">
-    <img src="escocia.jpg"onclick="abrirZoom(this)">
-    <img src="fiji.jpg"onclick="abrirZoom(this)">
-    <img src="francia.jpg"onclick="abrirZoom(this)">
-    <img src="gales.jpg"onclick="abrirZoom(this)">
-    <img src="harlenquin.jpg"onclick="abrirZoom(this)">
-    <img src="inglaterra.jpg"onclick="abrirZoom(this)">
-    <img src="irlanda.jpg"onclick="abrirZoom(this)">
-    <img src="italia.jpg"onclick="abrirZoom(this)">
-    <img src="munster.jpg"onclick="abrirZoom(this)">
-    <img src="nz-maori.jpg"onclick="abrirZoom(this)">
-    <img src="nz-negro.jpg"onclick="abrirZoom(this)">
-    <img src="nz.jpg"onclick="abrirZoom(this)">  
-    <img src="rancing.jpg"onclick="abrirZoom(this)">
-    <img src="sudafrica.jpg"onclick="abrirZoom(this)">  
-    <img src="talle.png"onclick="abrirZoom(this)">
-    <img src="talleniño.png"onclick="abrirZoom(this)">   
+    <img src="argentina.jpeg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="argentina1.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="argentina2.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="australia.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="crusader.JPG" loading="lazy" onclick="abrirZoom(this)">
+    <img src="escocia.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="fiji.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="francia.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="gales.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="harlenquin.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="inglaterra.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="irlanda.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="italia.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="munster.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="nz-maori.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="nz-negro.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="nz.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="rancing.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="sudafrica.jpg" loading="lazy" onclick="abrirZoom(this)">
+    <img src="talle.png" loading="lazy" onclick="abrirZoom(this)">
+    <img src="talleniño.png" loading="lazy" onclick="abrirZoom(this)">
 
     
   </div>
